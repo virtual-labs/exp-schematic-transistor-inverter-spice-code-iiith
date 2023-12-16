@@ -1,39 +1,173 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. In SPICE code, what command is used for transient analysis?",
+            "answers": {
+                "a": ".TRAN",
+                "b": ".AC",
+                "c": ".OP",
+                "d": ".DC"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "The '.TRAN' command is used for transient analysis in SPICE, which simulates the behavior of a circuit over time."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. What does the '.OP' command stand for in SPICE code?",
+            "answers": {
+                "a": "Output Power",
+                "b": "Operational Point",
+                "c": "Open Path",
+                "d": "Output Performance"
+            },
+            "correctAnswer": "b",
+            "explanation": {
+                "b": "The '.OP' command in SPICE stands for Operational Point. It is used for DC operating point analysis."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. What does SPICE stand for in the context of circuit simulation?",
+            "answers": {
+                "a": "Simulation Program with Integrated Circuit Emphasis",
+                "b": "Systematic Programming for Integrated Circuit Emulation",
+                "c": "Signal Processing in Circuit Environments",
+                "d": "Sequential Programming for Integrated Circuit Evaluation"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "SPICE stands for Simulation Program with Integrated Circuit Emphasis. It is a widely used tool for simulating and analyzing electronic circuits."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4. Which analysis is performed to study the effect of time-varying signals in SPICE?",
+            "answers": {
+                "a": "DC Analysis",
+                "b": "AC Analysis",
+                "c": "Transient Analysis",
+                "d": "Steady-State Analysis"
+            },
+            "correctAnswer": "c",
+            "explanation": {
+                "c": "Transient Analysis in SPICE is used to study the behavior of a circuit during the transition phase when there are sudden changes in the inputs or when the circuit/system is turned on or off."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "5. What component behavior is assumed during DC analysis in SPICE when dealing with inductors and capacitors?",
+            "answers": {
+                "a": "Inductors act as open circuits, capacitors act as open circuits",
+                "b": "Inductors act as short circuits, capacitors act as open circuits",
+                "c": "Inductors act as open circuits, capacitors act as short circuits",
+                "d": "Inductors act as short circuits, capacitors act as short circuits"
+            },
+            "correctAnswer": "b",
+            "explanation": {
+                "b": "During DC analysis in SPICE, inductors are assumed to act as short circuits, and capacitors are assumed to act as open circuits."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "6. What type of analysis is used for calculating small signal gain and impedance in SPICE?",
+            "answers": {
+                "a": "Pole Zero Analysis",
+                "b": "Transfer Function Analysis",
+                "c": "AC Analysis",
+                "d": "Frequency Response Analysis"
+            },
+            "correctAnswer": "b",
+            "explanation": {
+                "b": "Transfer Function Analysis in SPICE is used for calculating small signal gain and impedance of a circuit."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "7. Which SPICE command is used for sweeping a parameter over a specified range?",
+            "answers": {
+                "a": ".SWEEP",
+                "b": ".PARAM",
+                "c": ".DC",
+                "d": ".RANGE"
+            },
+            "correctAnswer": "c",
+            "explanation": {
+                "c": "The '.DC' command in SPICE is used for sweeping a parameter over a specified range during simulation."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "8. What is the purpose of the '.PARAM' command in SPICE?",
+            "answers": {
+                "a": "Define circuit parameters",
+                "b": "Perform parametric analysis",
+                "c": "Set initial conditions",
+                "d": "Generate random values"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "The '.PARAM' command in SPICE is used to define circuit parameters, making it easier to modify and analyze circuits with varying parameter values."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "9. Which analysis is focused on finding optimal values of certain parameters in a circuit using SPICE?",
+            "answers": {
+                "a": "Sensitivity Analysis",
+                "b": "Optimization Analysis",
+                "c": "Monte Carlo Analysis",
+                "d": "Parametric Analysis"
+            },
+            "correctAnswer": "b",
+            "explanation": {
+                "b": "The '.OPT' command in SPICE is used for optimization analysis, aiming to find the optimal values of certain parameters in a circuit."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "10. What is the purpose of the '.IC' command in SPICE?",
+            "answers": {
+                "a": "Initialize Conditions",
+                "b": "Iterative Calculation",
+                "c": "Input Circuit",
+                "d": "Intrusive Change"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "The '.IC' command in SPICE is used to set initial conditions for circuit variables during transient analysis, allowing the simulation to start from a specified initial state."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "11. In a CMOS inverter, what happens to the output voltage when the NMOS transistor is in the off state and the PMOS transistor is in the on state?",
+            "answers": {
+                "a": "Output voltage is low",
+                "b": "Output voltage is high",
+                "c": "Output voltage is at mid-level",
+                "d": "Output voltage is undefined"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "When the NMOS transistor is off and the PMOS transistor is on in a CMOS inverter, the output voltage is pulled to the low state, which corresponds to the ground voltage (logic 0)."
+            },
+            "difficulty": "intermediate" 
+        },
+        {
+            "question": "12. What SPICE command is commonly used to define the technology parameters of CMOS transistors in a circuit?",
+            "answers": {
+                "a": ".MODEL",
+                "b": ".PARAM",
+                "c": ".MOSFET",
+                "d": ".CMOS"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "The '.MODEL' command in SPICE is commonly used to define the technology parameters of CMOS transistors, including threshold voltage, mobility, and other characteristics."
+            },
+            "difficulty": "intermediate"
+        }
+    ]
 }

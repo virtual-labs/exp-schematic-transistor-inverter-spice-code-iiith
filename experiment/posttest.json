@@ -1,39 +1,145 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. In CMOS logic, what is the purpose of the pull-up network?",
+            "answers": {
+                "a": "To pull the output to a high voltage",
+                "b": "To pull the output to a low voltage",
+                "c": "To control the switching speed",
+                "d": "To provide feedback"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "The pull-up network in CMOS logic is responsible for pulling the output to a high voltage when the NMOS transistor is in the off state."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. What is the primary advantage of using CMOS technology in digital circuits?",
+            "answers": {
+                "a": "Low power consumption",
+                "b": "High speed",
+                "c": "Low cost",
+                "d": "High noise immunity"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "One of the primary advantages of using CMOS technology in digital circuits is its low power consumption, making it suitable for battery-powered devices and energy-efficient applications."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "3. In a CMOS inverter, what happens to the output voltage when both the NMOS and PMOS transistors are in the off state?",
+            "answers": {
+                "a": "Output voltage is low",
+                "b": "Output voltage is high",
+                "c": "Output voltage is at mid-level",
+                "d": "Output voltage is undefined"
+            },
+            "correctAnswer": "b",
+            "explanation": {
+                "b": "When both the NMOS and PMOS transistors are in the off state in a CMOS inverter, the output voltage is pulled high, corresponding to the supply voltage (logic 1)."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "4. What does the term 'threshold voltage' refer to in the context of CMOS transistors?",
+            "answers": {
+                "a": "The voltage level at which the transistor switches",
+                "b": "The maximum allowable voltage",
+                "c": "The minimum operating voltage",
+                "d": "The voltage drop across the transistor"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "In CMOS transistors, the threshold voltage is the voltage level at which the transistor switches from the off state to the on state or vice versa, controlling the logic level transitions."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "5. What SPICE command is used to specify the size of a MOSFET in a CMOS inverter circuit?",
+            "answers": {
+                "a": ".SIZE",
+                "b": ".WIDTH",
+                "c": ".LENGTH",
+                "d": ".MOS"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "The '.SIZE' command in SPICE is commonly used to specify the size of MOSFETs in a CMOS circuit. It helps define the width and length parameters of the transistors."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "6. How does the switching speed of a CMOS inverter relate to the size of the transistors?",
+            "answers": {
+                "a": "Switching speed increases with larger transistors",
+                "b": "Switching speed decreases with larger transistors",
+                "c": "Switching speed is independent of transistor size",
+                "d": "Switching speed is solely determined by threshold voltage"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "In general, the switching speed of a CMOS inverter increases with larger transistors. Larger transistors can carry more current, leading to faster charging and discharging of the output node."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "7. What is the purpose of the NMOS transistor in a CMOS inverter?",
+            "answers": {
+                "a": "To pull the output to a high voltage",
+                "b": "To pull the output to a low voltage",
+                "c": "To control the switching speed",
+                "d": "To provide feedback"
+            },
+            "correctAnswer": "b",
+            "explanation": {
+                "b": "The NMOS transistor in a CMOS inverter is responsible for pulling the output to a low voltage when it is in the on state."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "8. What is the primary advantage of using a CMOS inverter in logic circuits?",
+            "answers": {
+                "a": "High power consumption",
+                "b": "Low speed",
+                "c": "High noise sensitivity",
+                "d": "Complementary operation and low static power consumption"
+            },
+            "correctAnswer": "d",
+            "explanation": {
+                "d": "The primary advantage of using a CMOS inverter in logic circuits is its complementary operation, providing both high and low logic states, and low static power consumption when the circuit is in a stable state."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "9. In a CMOS inverter, what is the role of the PMOS transistor during the high state (logic 1) output?",
+            "answers": {
+                "a": "To pull the output to a high voltage",
+                "b": "To pull the output to a low voltage",
+                "c": "To control the switching speed",
+                "d": "To provide feedback"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "The PMOS transistor in a CMOS inverter is responsible for pulling the output to a high voltage when it is in the on state during the high state (logic 1) output."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "10. How does the propagation delay of a CMOS inverter change with an increase in supply voltage?",
+            "answers": {
+                "a": "Propagation delay decreases",
+                "b": "Propagation delay increases",
+                "c": "Propagation delay remains constant",
+                "d": "Propagation delay is unaffected by supply voltage"
+            },
+            "correctAnswer": "a",
+            "explanation": {
+                "a": "The propagation delay of a CMOS inverter generally decreases with an increase in supply voltage. Higher supply voltage allows for faster charging and discharging of the output node, reducing the overall propagation delay."
+            },
+            "difficulty": "advanced"
+        }
+    ]
 }
