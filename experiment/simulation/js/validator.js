@@ -211,13 +211,31 @@ export function isValid() {
         printErrors(msg, invCallSubckt);
         return false;
     }
+    if(invCallInstance.value.trim()[0]!="x" && invCallInstance.value.trim()[0]!="X")
+    {
+        let msg = "When instantiating a sub circuit, the name of the instance must always start with 'x' or 'X'"
+        printErrors(msg, invCallInstance);
+        return false;
+    }
+    if(pmosName.value.trim()[0]!="m" && pmosName.value.trim()[0]!="M")
+    {
+        let msg = "When instantiating a MOSFET, the name of the instance must always start with 'm' or 'M'"
+        printErrors(msg, pmosName);
+        return false;
+    }
+    if(nmosName.value.trim()[0]!="m" && nmosName.value.trim()[0]!="M")
+    {
+        let msg = "When instantiating a MOSFET, the name of the instance must always start with 'm' or 'M'"
+        printErrors(msg, nmosName);
+        return false;
+    }
     // mapping variables
     const variableMap = new Map();
     const variableSubcktMap = new Map();
-    let variableList = ["ptm_45nm.txt", "supply", "lmin", "wmin", "wp", convertToLowerCase(VolSrcName.value.trim()), convertToLowerCase(subcktName.value.trim()), convertToLowerCase(invCallInstance.value.trim()), "a", "out", "V1", "vdd", "gnd"];
-    let variableSubcktList = [convertToLowerCase(subcktName.value.trim()), convertToLowerCase(subcktIn.value.trim()), convertToLowerCase(subcktOut.value.trim()), convertToLowerCase(pmosName.value.trim()), convertToLowerCase(nmosName.value.trim()), "vdd", "gnd", "wmin", "lmin"];
+    let variableList = ["ptm_45nm.txt", "supply", "lmin", "wmin", "wp", convertToLowerCase(VolSrcName.value.trim()), convertToLowerCase(subcktName.value.trim()), convertToLowerCase(invCallInstance.value.trim()), "V1", "vdd", "gnd"];
+    let variableSubcktList = [convertToLowerCase(subcktName.value.trim()), convertToLowerCase(pmosName.value.trim()), convertToLowerCase(nmosName.value.trim()), "vdd", "gnd", "wmin", "lmin"];
     let variables_regular = [VolSrcName, subcktName, invCallInstance];
-    let subcktVars = [subcktName, subcktIn, subcktOut, pmosName, nmosName];
+    let subcktVars = [subcktName, pmosName, nmosName];
 
     // Iterate over the variable list
     for (let variable in variableList) {
@@ -301,6 +319,14 @@ export function printObsTable() {
     }
     if (volNeg.value === "vdd" || volNeg.value === "1.1") {
         correct = false;
+    }
+
+
+    const out = convertToLowerCase(subcktOut.value.trim())
+    const in_ = convertToLowerCase(subcktIn.value.trim())
+    if(in_===out )
+    {
+        correct=false
     }
 
     // checking subckt connection
