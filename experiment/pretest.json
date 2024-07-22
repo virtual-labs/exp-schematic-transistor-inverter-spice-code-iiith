@@ -25,7 +25,7 @@
             },
             "correctAnswer": "b",
             "explanation": {
-                "b": "The '.OP' command in SPICE stands for Operational Point. It is used for DC operating point analysis."
+                "b": "The '.OP' command in SPICE stands for Operational Point. It is used for DC analysis."
             },
             "difficulty": "beginner"
         },
