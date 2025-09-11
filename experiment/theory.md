@@ -1,4 +1,4 @@
-## 1. Inverter Fundamentals
+### 1. Inverter Fundamentals
 
 **DEFINITION OF INVERTER**
 
@@ -18,7 +18,7 @@ The transistor level schematic of inverter can be designed in many logics, follo
 1. Complementary CMOS logic
 2. Pseudo NMOS logic
 
-## 2. Introduction to SPICE
+### 2. Introduction to SPICE
 
 SPICE (Simulation Program with Integrated Circuit Emphasis) is a powerful program that is used in integrated circuit and board-level design to check the integrity of circuit designs and to predict circuit behavior. SPICE was originally developed at the Electronics Research Laboratory of the University of California, Berkeley (1975). Simulating the circuit with SPICE is the industry-standard way to verify circuit operation at the transistor level before committing to manufacturing an integrated circuit. In SPICE program, circuit elements (transistors, resistors, capacitors, etc) and their connections are translated into a text netlist.
 
@@ -37,9 +37,9 @@ Several types of circuit analyses can be done using SPICE program. Here are the 
 
 All analyses can be done at different temperatures. The default temperature is 300K.
 
-## 3. SPICE Syntax and Commands
+### 3. SPICE Syntax and Commands
 
-### SPICE Code
+#### SPICE Code
 
 A SPICE input file, also called source file, consists of three parts:
 
@@ -197,9 +197,9 @@ First line of SPICE code is always a comment. So this line is always ignored by 
 11. **.end**
     - Marks the end of the spice code.
 
-## 4. CMOS Inverter Implementation
+### 4. CMOS Inverter Implementation
 
-### CMOS INVERTER
+#### CMOS INVERTER
 
 In the transistor level design of CMOS inverter consists of NMOS and PMOS transistor in series. The PMOS transistor is connected between VDD and output node, whereas the NMOS is connected between the output node and ground.
 
@@ -233,7 +233,7 @@ The rise time is defined as the time required to charge the capacitor from 10% t
 
 Greater value of capacitor implies larger rise and fall time, which further implies large delay. The rise time and fall time are directly proportional to the capacitance. Therefore, greater the value of capacitance, greater will be the time taken for rising and falling.
 
-### PSEUDO NMOS
+#### PSEUDO NMOS
 
 The gate of p-device is permanently grounded which is equivalent to use of NMOS in depletion mode
 
