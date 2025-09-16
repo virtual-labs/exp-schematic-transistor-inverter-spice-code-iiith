@@ -1,24 +1,46 @@
-### Spice Code Platform
+### Schematic Diagram
 
-#### Code -
+Below is the schematic diagram for the CMOS inverter circuit. The diagram shows the connections for the bulk terminals of both PMOS and NMOS transistors, as well as the sizes (W/L ratios) of the transistors:
 
-- The code block that defines the name of the gate, includes file, and declares parameters should be placed first, followed by the code block that defines the voltage source, then the block that defines the inverter subcircuit, followed by the netlist statement that instantiates and calls the inverter subcircuit, then the block that defines the input waveform 'a' followed by the control statements to run the circuit and plot the required graphs, and then finally the end of code block.
-- Drag and drop the code blocks to arrange them in the order mentioned above.
-- Now enter the name of the MOSFET model file to be included ("PTM_45nm.txt").
-- To define the voltage source, enter a name for it and then select vdd as the positive terminal and 0 or gnd as the negative terminal.
-- Now, define the subcircuit by giving it a name and also giving names to the input and output arguments of the subckt.
-- Then inside this subckt block, give connections to the pmos and nmos as follows:
-  _INSTANCE_NAME DRAIN GATE SOURCE BODY NAME_OF_MOSFET_AS_MENTIONED_IN_MODEL_FILE_INCLUDED w=WIDTH l=LENGTH_
-  Give an instance name to both nmos and pmos, then the drain ports of both MOSFETS are to be connected to the output of the subcircuit, the gates to the input and the source and body of pmos to vdd, and of nmos to gnd or 0 respectively.
-  These connections are made as per the given circuit diagram:
+<img src="images/cmos_inverter.png">
 
- <img src="images/cmos_inverter.png">
+- **PMOS:** Connect bulk to VDD
+- **NMOS:** Connect bulk to GND
 
-- Now end the subckt block by typing the name of the subcircuit after '.ends'.
-- Now call this inverter subcircuit by giving an instance name, then by giving 'a' as input and 'out' as output and then complete the call by typing in the inverter subckt name.
-- **Note** : _While giving names to the subcircuit, nodes, variables and instance names, make sure that they begin with either alphabets, '%', '$' or '_' charachter only and they can only contain alphanumeric characters,'%', '$' and '\_' charachters only. The spice code is case insensitive so make sure to not give same names to any 2 variables in the same circuit or subcircuit irrespective of the case.\_
+> **Note:** Always ensure the bulk terminals are properly connected: PMOS bulk to VDD, NMOS bulk to GND.
 
-#### Observations -
+### Steps to Perform the Simulation
 
-- On clicking "validate" option after completing the code (assuming everything is filled correctly) you should see a "Success" message, a report, an input graph and an output graph under the observations section.
-- Observe the input wave and the corresponding output wave.
+1. **Arrange the Code Blocks:**
+
+- Start with the code block that defines the gate name, includes the MOSFET model file (`PTM_45nm.txt`), and declares parameters.
+- Next, define the voltage source, specifying `vdd` as the positive terminal and `gnd` (or `0`) as the negative terminal.
+- Define the inverter subcircuit, giving names to the input and output arguments.
+- Inside the subcircuit block, instantiate the PMOS and NMOS transistors using the following format:
+  ```
+  INSTANCE_NAME DRAIN GATE SOURCE BODY NAME_OF_MOSFET_AS_MENTIONED_IN_MODEL_FILE_INCLUDED w=WIDTH l=LENGTH
+  ```
+- Assign instance names to both NMOS and PMOS. Connect the drain terminals to the output node, gates to the input, PMOS source and body to VDD, NMOS source and body to GND.
+- End the subcircuit block with `.ends` followed by the subcircuit name.
+- Instantiate the inverter subcircuit, providing `a` as input and `out` as output.
+
+2. **Input Waveforms and Control Statements:**
+
+- Define the input waveform for `a`.
+- Add control statements to run the simulation and plot the required graphs.
+
+3. **Naming Conventions:**
+
+- Use only alphabets, `%`, `$`, or `_` as the starting character for subcircuit, node, variable, and instance names.
+- Names can contain alphanumeric characters, `%`, `$`, and `_`.
+- SPICE code is case-insensitive; avoid duplicate names regardless of case.
+
+### Observations
+
+- After completing the code, click "validate." If everything is correct, you should see a "Success" message, a report, and input/output graphs under the observations section.
+- Observe the input and corresponding output waveforms.
+
+---
+
+**Summary:**  
+This procedure ensures that the simulation setup is clear, the schematic is accurate (including bulk connections and transistor sizes), and the steps are easy to follow for successful SPICE simulation.

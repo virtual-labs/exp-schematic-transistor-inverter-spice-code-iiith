@@ -43,12 +43,12 @@
         "c": "Output voltage is at mid-level",
         "d": "Output voltage is undefined"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "d",
       "explanations": {
         "a": "Incorrect. The output is not low when both transistors are off.",
-        "b": "Correct. When both the NMOS and PMOS transistors are in the off state in a CMOS inverter, the output voltage is pulled high, corresponding to the supply voltage (logic 1).",
+        "b": "Incorrect. The output is not high when both transistors are off.",
         "c": "Incorrect. The output is not at mid-level in this state.",
-        "d": "Incorrect. The output is defined and is high in this state."
+        "d": "Correct. When both the NMOS and PMOS transistors are in the off state in a CMOS inverter, the output voltage is undefined because neither transistor is actively pulling the output to a defined logic level."
       },
       "difficulty": "intermediate"
     },

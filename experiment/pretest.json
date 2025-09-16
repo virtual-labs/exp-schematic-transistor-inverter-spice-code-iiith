@@ -94,11 +94,11 @@
         "c": "AC Analysis",
         "d": "Frequency Response Analysis"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "c",
       "explanations": {
         "a": "Incorrect. Pole Zero Analysis is used to find poles and zeros, not small signal gain and impedance.",
-        "b": "Correct. Transfer Function Analysis in SPICE is used for calculating small signal gain and impedance of a circuit.",
-        "c": "Incorrect. AC Analysis is used for frequency response, not specifically for small signal gain and impedance.",
+        "b": "Incorrect. Transfer Function Analysis is not the standard SPICE analysis for small signal gain and impedance.",
+        "c": "Correct. AC Analysis in SPICE is used for calculating small signal gain and impedance of a circuit.",
         "d": "Incorrect. Frequency Response Analysis is a general term and not a specific SPICE analysis type."
       },
       "difficulty": "intermediate"
@@ -179,12 +179,12 @@
         "c": "Output voltage is at mid-level",
         "d": "Output voltage is undefined"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "explanations": {
-        "a": "Correct. When the NMOS transistor is off and the PMOS transistor is on in a CMOS inverter, the output voltage is pulled to the low state, which corresponds to the ground voltage (logic 0).",
-        "b": "Incorrect. The output is not high in this state; it is low.",
-        "c": "Incorrect. The output is not at mid-level; it is low.",
-        "d": "Incorrect. The output is defined and is low in this state."
+        "a": "Incorrect. The output is not low in this state; it is high.",
+        "b": "Correct. When the NMOS transistor is off and the PMOS transistor is on in a CMOS inverter, the output voltage is pulled to the high state, which corresponds to the supply voltage (logic 1).",
+        "c": "Incorrect. The output is not at mid-level; it is high.",
+        "d": "Incorrect. The output is defined and is high in this state."
       },
       "difficulty": "intermediate"
     },
