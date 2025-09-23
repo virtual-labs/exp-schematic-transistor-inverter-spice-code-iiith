@@ -94,7 +94,7 @@ for ( $i = 0 ; $i < $str_len ; $i++ )
 	
 }
 
-echo '<applet code="exp4_out.class" width="410" height="185" Align="Middle" name= "exp4_out">';
+echo '<applet code="exp4_out.class" width="900" height="400" Align="Middle" name= "exp4_out">';
 
 echo '<param name = variableCount value ='.$var_count .' >';
 echo '<param name = valueCount value ='.$points_count .' >';
