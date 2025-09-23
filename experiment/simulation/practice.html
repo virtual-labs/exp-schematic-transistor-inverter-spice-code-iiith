@@ -45,8 +45,8 @@
                 step by step.
               </li>
               <li>
-                Each code block below is a part of the final code. Fill in the
-                blanks in each block.
+                Each colored code block below is a part of the final code. Fill
+                in the blanks in each block.
               </li>
               <li>
                 Arrange the blocks in the correct order (see steps below).
@@ -95,28 +95,43 @@
     </div>
     <div
       class="columns is-variable is-1 is-centered is-flex is-flex-wrap-wrap my-0"
+      style="flex-direction: row"
     >
-      <div
-        id="start"
-        class="column is-1-desktop is-2-tablet is-3-mobile center-content"
-      >
-        <button class="v-button" onclick="ValidateCode()">Validate</button>
-      </div>
-      <div
-        id="restart"
-        class="column is-1-desktop is-2-tablet is-3-mobile center-content"
-      >
-        <button class="v-button" onclick="viewModelFile()">
-          View PTM_45nm.txt
-        </button>
-      </div>
-      <div
-        id="restart"
-        class="column is-1-desktop is-2-tablet is-3-mobile center-content"
-      >
-        <button class="v-button" onclick="location.reload()">Reset</button>
+      <div class="column is-12-mobile is-4-tablet is-4-desktop center-content">
+        <div class="button-group-mobile">
+          <button
+            class="v-button"
+            style="width: 100%; margin-bottom: 0.5em"
+            onclick="ValidateCode()"
+          >
+            Validate
+          </button>
+          <button
+            class="v-button"
+            style="width: 100%; margin-bottom: 0.5em"
+            onclick="viewModelFile()"
+          >
+            View PTM_45nm.txt
+          </button>
+          <button
+            class="v-button"
+            style="width: 100%"
+            onclick="location.reload()"
+          >
+            Reset
+          </button>
+        </div>
       </div>
     </div>
+    <style>
+      @media (max-width: 600px) {
+        .button-group-mobile {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+        }
+      }
+    </style>
     <div class="columns is-variable is-5 is-centered is-flex is-flex-wrap-wrap">
       <div class="column is-9-desktop is-10-tablet is-11-mobile center-content">
         <div class="v-datalist-container">
@@ -353,13 +368,6 @@
           <div class="v-datalist-row">
             <div id="result"></div>
             <div id="obs-table"></div>
-            <button
-              class="v-button mt-2"
-              onclick="expandWaveform()"
-              style="width: 100%"
-            >
-              Expand Waveform
-            </button>
           </div>
         </div>
       </div>
@@ -378,26 +386,7 @@
         });
       });
 
-      // Expand waveform button functionality
-      window.expandWaveform = function () {
-        // Find the applet in the obs-table and open in a new window with larger size
-        const applet = document.querySelector("#obs-table applet");
-        if (applet) {
-          const appletHTML = applet.outerHTML
-            .replace(/width="\d+"/, 'width="1400"')
-            .replace(/height="\d+"/, 'height="650"');
-          const win = window.open(
-            "",
-            "_blank",
-            "width=1500,height=700,scrollbars=yes,resizable=yes"
-          );
-          win.document.write("<html><body>" + appletHTML + "</body></html>");
-        } else {
-          alert(
-            "No waveform available to expand yet. Please validate your code first."
-          );
-        }
-      };
+      // ...existing code...
     </script>
     <script src="./js/main.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
