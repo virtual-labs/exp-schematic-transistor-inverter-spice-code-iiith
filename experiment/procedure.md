@@ -11,36 +11,39 @@ Below is the schematic diagram for the CMOS inverter circuit. The diagram shows 
 
 ### Steps to Perform the Simulation
 
-1. **Arrange the Code Blocks:**
+The simulation page uses colored code blocks to help you visually identify each step in building the SPICE code for a CMOS inverter. Each block represents a key part of the code and is color-coded for clarity. Follow the instructions below for a smooth experience:
 
-- Start with the code block that defines the gate name, includes the MOSFET model file (`PTM_45nm.txt`), and declares parameters.
-- Next, define the voltage source, specifying `vdd` as the positive terminal and `gnd` (or `0`) as the negative terminal.
-- Define the inverter subcircuit, giving names to the input and output arguments.
-- Inside the subcircuit block, instantiate the PMOS and NMOS transistors using the following format:
+1. **Arrange the Colored Code Blocks:**
+
+- Start with the blue block for the MOSFET model file (`PTM_45nm.txt`) and parameter declarations.
+- Next, use the green block to define the voltage source (`vdd` as positive, `gnd` or `0` as negative).
+- The yellow block is for the inverter subcircuit definition, including input/output names and PMOS/NMOS connections. Use the format:
   ```
-  INSTANCE_NAME DRAIN GATE SOURCE BODY NAME_OF_MOSFET_AS_MENTIONED_IN_MODEL_FILE_INCLUDED w=WIDTH l=LENGTH
+  INSTANCE_NAME DRAIN GATE SOURCE BODY MODEL_FILE w=WIDTH l=LENGTH
   ```
-- Assign instance names to both NMOS and PMOS. Connect the drain terminals to the output node, gates to the input, PMOS source and body to VDD, NMOS source and body to GND.
-- End the subcircuit block with `.ends` followed by the subcircuit name.
-- Instantiate the inverter subcircuit, providing `a` as input and `out` as output.
+- The red block is for instantiating the inverter subcircuit in your main code.
+- The teal block is for declaring the input waveform.
+- The purple block is for control statements to run and plot the simulation.
+- The gray block marks the end of your SPICE code.
 
-2. **Input Waveforms and Control Statements:**
+2. **Complete Each Block:**
 
-- Define the input waveform for `a`.
-- Add control statements to run the simulation and plot the required graphs.
+- Fill in the blanks in each colored block with the required values and names.
+- Arrange the blocks in the order listed above for a valid simulation.
 
 3. **Naming Conventions:**
 
-- Use only alphabets, `%`, `$`, or `_` as the starting character for subcircuit, node, variable, and instance names.
-- Names can contain alphanumeric characters, `%`, `$`, and `_`.
-- SPICE code is case-insensitive; avoid duplicate names regardless of case.
+- Start names with an alphabet, `%`, `$`, or `_`.
+- Names can include alphanumeric characters, `%`, `$`, and `_`.
+- SPICE code is case-insensitive; do not use duplicate names (even with different cases).
 
 ### Observations
 
-- After completing the code, click "validate." If everything is correct, you should see a "Success" message, a report, and input/output graphs under the observations section.
-- Observe the input and corresponding output waveforms.
+- After completing and arranging the colored blocks, click "Validate." If everything is correct, you will see a "Success" message, a report, and input/output graphs in the Observations section.
+- Use the "Expand Waveform" button to view larger graphs for better analysis.
+- Observe how the input signal and output waveform relate to the inverter's operation.
 
 ---
 
 **Summary:**  
-This procedure ensures that the simulation setup is clear, the schematic is accurate (including bulk connections and transistor sizes), and the steps are easy to follow for successful SPICE simulation.
+This improved procedure matches the simulation interface, making it easier for beginners to follow each step and understand the role of every code block. The color coding and clear instructions help ensure a successful SPICE simulation.
