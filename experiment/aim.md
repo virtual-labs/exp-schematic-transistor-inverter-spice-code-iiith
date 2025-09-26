@@ -1,1 +1,1 @@
-### Aim of the experiment
+To design and simulate a transistor-level inverter circuit using SPICE code.
