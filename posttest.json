@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. In CMOS logic, what is the purpose of the pull-up network?",
+      "answers": {
+        "a": "To pull the output to a high voltage",
+        "b": "To pull the output to a low voltage",
+        "c": "To control the switching speed",
+        "d": "To provide feedback"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The pull-up network in CMOS logic is responsible for pulling the output to a high voltage when the NMOS transistor is in the off state.",
+        "b": "Incorrect. Pulling the output to a low voltage is the job of the pull-down network (NMOS).",
+        "c": "Incorrect. The pull-up network does not directly control switching speed; it sets the output level.",
+        "d": "Incorrect. Feedback is not the primary purpose of the pull-up network."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. What is the primary advantage of using CMOS technology in digital circuits?",
+      "answers": {
+        "a": "Low power consumption",
+        "b": "High speed",
+        "c": "Low cost",
+        "d": "High noise immunity"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. One of the primary advantages of using CMOS technology in digital circuits is its low power consumption, making it suitable for battery-powered devices and energy-efficient applications.",
+        "b": "Incorrect. While CMOS can be fast, low power consumption is its main advantage.",
+        "c": "Incorrect. CMOS is not always the lowest cost option compared to other technologies.",
+        "d": "Incorrect. CMOS does have good noise immunity, but low power consumption is the primary advantage."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. In a CMOS inverter, what happens to the output voltage when both the NMOS and PMOS transistors are in the off state?",
+      "answers": {
+        "a": "Output voltage is low",
+        "b": "Output voltage is high",
+        "c": "Output voltage is at mid-level",
+        "d": "Output voltage is undefined"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The output is not low when both transistors are off.",
+        "b": "Incorrect. The output is not high when both transistors are off.",
+        "c": "Incorrect. The output is not at mid-level in this state.",
+        "d": "Correct. When both the NMOS and PMOS transistors are in the off state in a CMOS inverter, the output voltage is undefined because neither transistor is actively pulling the output to a defined logic level."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. What does the term 'threshold voltage' refer to in the context of CMOS transistors?",
+      "answers": {
+        "a": "The voltage level at which the transistor switches",
+        "b": "The maximum allowable voltage",
+        "c": "The minimum operating voltage",
+        "d": "The voltage drop across the transistor"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In CMOS transistors, the threshold voltage is the voltage level at which the transistor switches from the off state to the on state or vice versa, controlling the logic level transitions.",
+        "b": "Incorrect. The maximum allowable voltage is not the threshold voltage.",
+        "c": "Incorrect. The minimum operating voltage is not the threshold voltage.",
+        "d": "Incorrect. The voltage drop across the transistor is not the threshold voltage."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. What SPICE command is used to specify the size of a MOSFET in a CMOS inverter circuit?",
+      "answers": {
+        "a": ".SIZE",
+        "b": ".WIDTH",
+        "c": ".LENGTH",
+        "d": ".MOS"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The '.SIZE' command in SPICE is commonly used to specify the size of MOSFETs in a CMOS circuit. It helps define the width and length parameters of the transistors.",
+        "b": "Incorrect. '.WIDTH' is not a standard SPICE command for specifying MOSFET size.",
+        "c": "Incorrect. '.LENGTH' is not a standard SPICE command for specifying MOSFET size.",
+        "d": "Incorrect. '.MOS' is not a standard SPICE command for specifying MOSFET size."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "6. How does the switching speed of a CMOS inverter relate to the size of the transistors?",
+      "answers": {
+        "a": "Switching speed increases with larger transistors",
+        "b": "Switching speed decreases with larger transistors",
+        "c": "Switching speed is independent of transistor size",
+        "d": "Switching speed is solely determined by threshold voltage"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In general, the switching speed of a CMOS inverter increases with larger transistors. Larger transistors can carry more current, leading to faster charging and discharging of the output node.",
+        "b": "Incorrect. Switching speed does not decrease with larger transistors; it increases.",
+        "c": "Incorrect. Switching speed is affected by transistor size.",
+        "d": "Incorrect. Switching speed is not solely determined by threshold voltage; transistor size also matters."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. What is the purpose of the NMOS transistor in a CMOS inverter?",
+      "answers": {
+        "a": "To pull the output to a high voltage",
+        "b": "To pull the output to a low voltage",
+        "c": "To control the switching speed",
+        "d": "To provide feedback"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Pulling the output to a high voltage is the job of the PMOS transistor.",
+        "b": "Correct. The NMOS transistor in a CMOS inverter is responsible for pulling the output to a low voltage when it is in the on state.",
+        "c": "Incorrect. While NMOS can affect switching speed, its main purpose is to pull the output low.",
+        "d": "Incorrect. Feedback is not the primary purpose of the NMOS transistor."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. What is the primary advantage of using a CMOS inverter in logic circuits?",
+      "answers": {
+        "a": "High power consumption",
+        "b": "Low speed",
+        "c": "High noise sensitivity",
+        "d": "Complementary operation and low static power consumption"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. CMOS inverters are known for low power consumption, not high.",
+        "b": "Incorrect. CMOS inverters are generally fast, not slow.",
+        "c": "Incorrect. CMOS inverters have high noise immunity, not sensitivity.",
+        "d": "Correct. The primary advantage of using a CMOS inverter in logic circuits is its complementary operation, providing both high and low logic states, and low static power consumption when the circuit is in a stable state."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. In a CMOS inverter, what is the role of the PMOS transistor during the high state (logic 1) output?",
+      "answers": {
+        "a": "To pull the output to a high voltage",
+        "b": "To pull the output to a low voltage",
+        "c": "To control the switching speed",
+        "d": "To provide feedback"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The PMOS transistor in a CMOS inverter is responsible for pulling the output to a high voltage when it is in the on state during the high state (logic 1) output.",
+        "b": "Incorrect. Pulling the output to a low voltage is the job of the NMOS transistor.",
+        "c": "Incorrect. While PMOS can affect switching speed, its main purpose is to pull the output high.",
+        "d": "Incorrect. Feedback is not the primary purpose of the PMOS transistor."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "10. How does the propagation delay of a CMOS inverter change with an increase in supply voltage?",
+      "answers": {
+        "a": "Propagation delay decreases",
+        "b": "Propagation delay increases",
+        "c": "Propagation delay remains constant",
+        "d": "Propagation delay is unaffected by supply voltage"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The propagation delay of a CMOS inverter generally decreases with an increase in supply voltage. Higher supply voltage allows for faster charging and discharging of the output node, reducing the overall propagation delay.",
+        "b": "Incorrect. Propagation delay does not increase with higher supply voltage; it decreases.",
+        "c": "Incorrect. Propagation delay is affected by supply voltage and does not remain constant.",
+        "d": "Incorrect. Propagation delay is affected by supply voltage."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
